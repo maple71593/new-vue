@@ -1,47 +1,46 @@
 <template>
-  <!-- 主体区域 -->
-  <section id="app">
-    <!-- 输入框 -->
-    <header class="header">
-      <h1>小黑记事本</h1>
-      <input placeholder="请输入任务" class="new-todo" />
-      <button class="add">添加任务</button>
-    </header>
-
-    <!-- 列表区域 -->
-    <section class="main">
-      <ul class="todo-list">
-        <li class="todo">
-          <div class="view">
-            <span class="index">1.</span> <label>吃饭饭</label>
-            <button class="destroy"></button>
-          </div>
-        </li>
-      </ul>
-    </section>
-    
-    <!-- 统计和清空 -->
-    <footer class="footer">
-      <!-- 统计 -->
-      <span class="todo-count">合 计:<strong> 1 </strong></span>
-      <!-- 清空 -->
-      <button class="clear-completed">
-        清空任务
-      </button>
-    </footer>
-  </section>
+  <div>
+    <div class="footer_wrap">
+      <a href="#/find">发现音乐</a>
+      <a href="#/my">我的音乐</a>
+      <a href="#/friend">朋友</a>
+    </div>
+    <div class="top">
+      <!-- 路由出口 → 匹配的组件所展示的位置 -->
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-
-    }
-  }
-}
+export default {};
 </script>
 
 <style>
-
+body {
+  margin: 0;
+  padding: 0;
+}
+.footer_wrap {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  color: #ccc;
+}
+.footer_wrap a {
+  flex: 1;
+  text-decoration: none;
+  padding: 20px 0;
+  line-height: 20px;
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid black;
+}
+.footer_wrap a:hover {
+  background-color: #555;
+}
 </style>
