@@ -1,12 +1,20 @@
 <template>
   <div class="h5-wrapper">
-    <router-view></router-view>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+    <nav class="tabbar">
+      <router-link to="/Article">面经</router-link>
+      <router-link to="/Collect">收藏</router-link>
+      <router-link to="/Like">喜欢</router-link>
+      <router-link to="/User">我的</router-link>
+    </nav>
   </div>
 </template>
 
 <script>
 export default {
-  name: "h5-wrapper",
+  name: "LayoutPage",
 }
 </script>
 
@@ -38,9 +46,10 @@ body {
       font-size: 14px;
       color: #333;
       -webkit-tap-highlight-color: transparent;
-      &.router-link-active {
-        color: #fa0;
-      }
+    }
+    a.router-link-active{
+      background-color: #333;
+      color: rgb(154, 237, 154);
     }
   }
 }

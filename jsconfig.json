@@ -6,7 +6,7 @@
     "moduleResolution": "node",
     "paths": {
       "@/*": [
-        "src/*"
+        "05.路由引用/*"
       ]
     },
     "lib": [
